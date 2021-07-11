@@ -1,0 +1,18 @@
+<h1>
+  {{    title   }}
+</h1>
+
+
+<img [src]="photoURL[selectedIndex]" width="100%" />
+
+
+<h3>Fruits are good for health : {{ arrayOfFruits.length }} fruit(s) </h3>
+<ul>
+  
+  
+  <li *ngFor="   let fruit of arrayOfFruits   " >
+    <h3>{{ fruit.name }}   <span *ngIf="fruit.isOld == true " >*</span>   </h3>
+    <p> <small> Quantity : {{fruit.quantity}} </small> </p>
+  </li>
+ 
+</ul>
