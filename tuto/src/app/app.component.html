@@ -1,7 +1,4 @@
-<h1>
-  {{    title   }}
-</h1>
-
+ 
 
 <!--<img [src]="photoURL[selectedIndex]" width="100%" />
 
@@ -127,13 +124,44 @@
 
 
 
+<!--
 <input type="text" (keyup)="searching($event)" >
 <ul>
 
   <li *ngFor="let u of usersFilterd">
      <p>
-       <strong>{{u.name}}</strong><br>
+       <strong>{{  u.name | uppercase }}</strong><br>
        {{u.phonenumber}}
      </p>
   </li>
 </ul>
+
+-->
+
+
+<!--<h1> {{val | currency:'TND' }} </h1>-->
+
+<!--<h1> {{val | titlecase }} </h1>-->
+
+<!-- <h1> {{ val | date:'medium' }} </h1> -->
+<!-- 
+<h1> {{ val | deletewhitespace }} </h1>
+
+<h1> email : {{ email | hideemail }} </h1>-->
+
+
+<!-- 
+<input [(ngModel)]="val" type="text"  >
+
+<button (click)="checkInputVal()">check</button>-->
+
+
+<!-- new comps -->
+
+
+
+
+<app-navbar></app-navbar>
+
+<app-bloc-articles></app-bloc-articles>
+ 

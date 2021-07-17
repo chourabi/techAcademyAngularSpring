@@ -68,7 +68,7 @@ export class AppComponent {
    users = [];
 */
 
-
+/*
 
   users = [
       //    xxxx
@@ -90,12 +90,12 @@ export class AppComponent {
   { name:"Jmaes brow" , phonenumber:"22554477"},
   
 ];
-
+*/
 
 
   constructor(){
   }
-
+/*
   searching(e){
     const query = e.target.value.toLowerCase();
 
@@ -104,6 +104,12 @@ export class AppComponent {
     this.usersFilterd = res
     
   }
+
+
+  /*deleteWhiteSpace(mot:string){
+    return mot.replace(' ', '');
+
+  }*/
 
 
 
@@ -142,5 +148,34 @@ export class AppComponent {
 
 
   }*/
+
+
+
+  // pipes 
+
+  //val = new Date();
+/*
+  val = "hello world, angular is awesome !!"
+
+
+
+ email = "tchourabi@gmail.com";
+ // tch*******@****.com*/
+
+
+ val = "test";
+
+
+ checkInputVal(){
+   console.log(this.val);
+   
+ }
+
+
+
+
+
+
+
   
 }
