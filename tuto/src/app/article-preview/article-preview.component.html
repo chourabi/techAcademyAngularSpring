@@ -13,7 +13,7 @@
                 <button class="btn btn-outline-secondary" (click)="openAllComments()"> {{comments.length}} {{ commentsIsOpned == false ? 'Show all comments':'hide comments'  }}</button>
             </div>
             <div class="col-4">
-                <button class="btn btn-outline-warning"> share</button>
+                <a class="btn btn-outline-warning" [routerLink]="   '/details/'+id  "> see more</a>
             </div>
             
             
