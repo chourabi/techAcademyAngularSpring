@@ -16,6 +16,9 @@ import { NotFoundRouteComponent } from './not-found-route/not-found-route.compon
 import { ArticleMoreDetailsComponent } from './article-more-details/article-more-details.component';
 import { DiscoverUsComponent } from './discover-us/discover-us.component';
 import { OurServicesComponent } from './our-services/our-services.component';
+import { MemosComponent } from './memos/memos.component';
+import { AddMemosComponent } from './add-memos/add-memos.component';
+import { NewtypesComponent } from './newtypes/newtypes.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,10 @@ import { OurServicesComponent } from './our-services/our-services.component';
     NotFoundRouteComponent,
     ArticleMoreDetailsComponent,
     DiscoverUsComponent,
-    OurServicesComponent
+    OurServicesComponent,
+    MemosComponent,
+    AddMemosComponent,
+    NewtypesComponent
   ],
   imports: [
     BrowserModule,
