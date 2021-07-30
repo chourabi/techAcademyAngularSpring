@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-newtypes',
@@ -11,8 +12,6 @@ export class NewtypesComponent implements OnInit {
 
   ngOnInit(): void {
 
-    console.log("calling c1 ...");
-
     /*this.callC1().then((data)=>{
       this.callC2(data).then((res2)=>{
         this.callC3(res2).then((res3)=>{
@@ -24,11 +23,55 @@ export class NewtypesComponent implements OnInit {
 
     })*/
 
-    this.makeCalls();
+    //this.makeCalls();
+
+
+
+    // watch position via observable
+    let locations = new Observable((observer)=>{
+
+
+      let interval = setInterval(()=>{
+        console.log("still sending data !! :o");
+        
+        observer.next('data');
+      },2000)
+
+      return{
+        unsubscribe(){
+          clearInterval(interval);
+        }
+      }
+       
+    })
+
+
+    let watch = locations.subscribe((flux)=>{
+      console.log(flux);
+      
+    },(err)=>{
+
+    })
+
+
+    setTimeout(()=>{
+      watch.unsubscribe();
+    },7000);
+
+
+
+
+
+
+
+
+
 
   }
 
 
+  // promise
+/*
   async makeCalls() {
     let resC1 = await this.callC1();
     
@@ -77,6 +120,13 @@ export class NewtypesComponent implements OnInit {
     })
 
     return promise;
-  }
+  }*/
+
+
+
+  //observable
+
+ 
+
 
 }
